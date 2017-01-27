@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-xs-12 col-sm-7">
+            <div id="fight">
+                <div class="col-xs-8 col-xs-offset-4 col-sm-8 col-sm-offset-4 col-md-6 col-md-offset-6">
+
+                    <div style="display: inline-block">
+                        <div id="perso1PV"></div>
+                        <div class="progress" style="width:50px">
+                            <div id="perso1BarrePV" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div>
+                            <img id="perso1" src="assets/img/perso1-0.png" height="100px">
+                        </div>
+                    </div>
+                    <div style="display: inline-block">
+                        <div id="perso2PV"></div>
+                        <div class="progress" style="width:50px">
+                            <div id="perso2BarrePV" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div>
+                            <img id="perso2" src="assets/img/perso2-0.png" height="100px" style="transform: scaleX(-1)">
+                        </div>
+                    </div>
+                    <div id="degats" style="position: absolute;top: 50px;left: 50px;color: red;font-weight: bold;font-size: 18px;-webkit-transform: rotate(-20deg);"></div>
+                    <div id="annonce"></div>
+                    <div id="infoCombat"></div>
+                </div>
+                <div id="historique" style="font-size:15px;">
+                    <h3><center>Historique</center></h3>
+                </div>
+            </div>
+
+            <div id="infoPlayer">
+                <h1>Informations joueur</h1>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+            <div id="oldFights">
+                <div id="runFight">
+                    <input id="perso1Nom" type="text" class="form-control" placeholder="Nom perso1"><br>
+                    <input id="perso2Nom" type="text" class="form-control" placeholder="Nom perso2"><br>
+                    <button id="lancerCombat" type="button" name="button" class="btn btn-primary">Lancer le combat</button>
+                </div>
+                <h4><center>Anciens combats</center></h4>
+            </div>
+            <div id="joueursListe">
+                <h4><center>Joueurs</center></h4>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="navbar-fixed-bottom">
+        Quand un joueur en tue un autre il gagne 20 xp de base. <br> Si le vainqueur est plus fort que le perdant, les lvl de difference sont déduit des 20xp.<br> Par contre si il est plus faible que le perdant il gagne 20 * (LVLDEDIF * 1.5). <br> Pour
+        passer de niveau il faut 12 * le lvl en xp. exemple lvl 1 * 12 = 12 xp pour passer lvl 2.
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="assets/js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
